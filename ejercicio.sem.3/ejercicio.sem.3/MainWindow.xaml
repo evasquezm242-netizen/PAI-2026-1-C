@@ -1,0 +1,30 @@
+﻿<Window x:Class="ejercicio.sem._3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ejercicio.sem._3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="741*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="96" Margin="35,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="444"/>
+        <CheckBox x:Name="cbTipoLetra" Grid.Column="1" Content="Cambiar tipo de letra" HorizontalAlignment="Left" Margin="61,66,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbColorTexto" Grid.Column="1" Content="Cambiar color de texto" HorizontalAlignment="Left" Margin="61,86,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbColorFondo" Grid.Column="1" Content="Cambiar color de fondo" HorizontalAlignment="Left" Margin="61,106,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btAplicar_click" Grid.Column="1" Content="Aplicar" HorizontalAlignment="Left" Margin="284,54,0,0" VerticalAlignment="Top" Click="btAplicar_click_1"/>
+        <Label Grid.Column="1" Content="Control checkBox" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbTexto" Grid.Column="1" Content="Uso de control de checkBox" HorizontalAlignment="Left" Margin="238,82,0,0" VerticalAlignment="Top" FontFamily="Arial Narrow"/>
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="96" Margin="35,213,0,0" Stroke="Black" VerticalAlignment="Top" Width="444"/>
+        <Button x:Name="btAplicarRadio_Click" Grid.Column="1" Content="Aplicar" HorizontalAlignment="Left" Margin="316,223,0,0" VerticalAlignment="Top" Click="btAplicarRadio_Click_1"/>
+        <Label Grid.Column="1" Content="Control RadioButton" HorizontalAlignment="Left" Margin="35,187,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbTipoLetra" Grid.Column="1" Content="Cambiar tipo de letra" HorizontalAlignment="Left" Margin="61,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.473,2.6"/>
+        <RadioButton x:Name="rbColorTexto" Grid.Column="1" Content="Cambiar color de texto" HorizontalAlignment="Left" Margin="61,251,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="rbColorFondo" Grid.Column="1" Content="Cambiar color de texto" HorizontalAlignment="Left" Margin="61,271,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbTextoRadio" Grid.Column="1" Content="Uso de control de RadioButton" HorizontalAlignment="Left" Margin="238,248,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
