@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label Content="INFORMACION GENERAL" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="780" Foreground="#FF362E2E" Background="#FFC3CEC4">
+            <Label.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF451414" Offset="1"/>
+                    <GradientStop Color="#FF081B0B" Offset="0.404"/>
+                    <GradientStop Color="#FF113716" Offset="0.865"/>
+                    <GradientStop Color="White" Offset="0.165"/>
+                </LinearGradientBrush>
+            </Label.OpacityMask>
+        </Label>
+        <Label Content="Personal:" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cuadroPersonal" HorizontalAlignment="Left" Margin="67,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Código:" HorizontalAlignment="Left" Margin="415,53,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Codigo" HorizontalAlignment="Left" Margin="469,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Aportaciones:" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Fonavi" Content="Fonavi (8%)" HorizontalAlignment="Left" Margin="21,127,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" RenderTransformOrigin="0.5,0.5"/>
+        <CheckBox x:Name="Imp_Renta" Content="Imp. Renta (5%)" HorizontalAlignment="Left" Margin="21,147,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="A_F_P" Content="A.F.P (12%)" HorizontalAlignment="Left" Margin="21,167,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_1"/>
+        <Label Content="Ingreso: " HorizontalAlignment="Left" Margin="21,205,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Ingreso" HorizontalAlignment="Left" Margin="77,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="141" TextChanged="TextBox_TextChanged_1"/>
+        <Button x:Name="Calcular" Content="Calcular" HorizontalAlignment="Left" Margin="418,0,0,0" VerticalAlignment="Center" Click="Button_Click"/>
+        <Label Content="RESULTADOS" HorizontalAlignment="Center" Margin="0,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.274,0.487" Width="780" Background="#FFBBB3B3"/>
+        <Label Content="Fonavi:" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top"/>
+        <Label Content="Imp. Renta:" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top"/>
+        <Label Content="A.F.P:" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top"/>
+        <Label Content="Total a pagar:" HorizontalAlignment="Left" Margin="349,280,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="RespFonavi" HorizontalAlignment="Left" Margin="67,272,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="RespI_Rent" HorizontalAlignment="Left" Margin="84,298,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="RespAFP" HorizontalAlignment="Left" Margin="53,324,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Total" HorizontalAlignment="Left" Margin="435,285,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
