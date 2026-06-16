@@ -1,0 +1,55 @@
+﻿<Window x:Class="EjercicioImpresiones.sem4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EjercicioImpresiones.sem4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnGrabar"
+        Content="Grabar"
+        HorizontalAlignment="Left"
+        Margin="500,103,0,0"
+        VerticalAlignment="Top"
+        Click="btnGrabar_Click"/>
+
+        <Button x:Name="btnEstadistica"
+        Content="Estadistica"
+        HorizontalAlignment="Left"
+        Margin="609,103,0,0"
+        VerticalAlignment="Top"
+        Click="btnEstadistica_Click"/>
+        
+        <Label Content="Cliente" HorizontalAlignment="Left" Margin="39,29,0,0" VerticalAlignment="Top" Height="24" Width="50" FontWeight="Bold"/>
+        <TextBox x:Name="txtCliente" HorizontalAlignment="Left" Margin="94,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"/>
+        <Label Content="Nro. Cel :" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.484,0.918"/>
+        <TextBox x:Name="txtCelular" HorizontalAlignment="Left" Margin="436,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <Label Content="Cantidad:" HorizontalAlignment="Left" Margin="39,55,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="páginas" HorizontalAlignment="Left" Margin="230,54,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Tarifa: " HorizontalAlignment="Left" Margin="39,92,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="-0.281,0.51"/>
+        <RadioButton x:Name="rbEscolar" Content="Escolar" HorizontalAlignment="Left" Margin="165,89,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <RadioButton x:Name="rbUniversitario" Content="Universitario" HorizontalAlignment="Left" Margin="257,89,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <RadioButton x:Name="rbOrganizacion" Content="Oraganizacion" HorizontalAlignment="Left" Margin="382,85,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Cliente:" HorizontalAlignment="Left" Margin="54,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.276,-2.502" FontWeight="Bold"/>
+        <Label Content="Nro. Cel" HorizontalAlignment="Left" Margin="194,155,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Cantidad:" HorizontalAlignment="Left" Margin="303,155,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Tarifa:" HorizontalAlignment="Left" Margin="423,150,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Importe:" HorizontalAlignment="Left" Margin="557,155,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="105,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Estadistica" HorizontalAlignment="Left" Margin="609,103,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstCliente" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="54,186,635,129"/>
+        <ListBox x:Name="lstCelular" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="192,186,527,129"/>
+        <ListBox x:Name="lstCantidad" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="303,186,408,129"/>
+        <ListBox x:Name="lstTarifa" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="423,186,276,129"/>
+        <ListBox x:Name="lstImporte" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="557,186,132,129"/>
+        <TextBlock HorizontalAlignment="Left" Margin="39,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"><Run Text="Nro. Importe Escolares"/><Run Language="es-pe" Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="39,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"><Run Text="Nro. Importe Universitario"/><Run Language="es-pe" Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="354,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"><Run Text="Nro. Impre. Organizacionales"/><Run Language="es-pe" Text=":"/></TextBlock>
+        <TextBox x:Name="txtEscolares" HorizontalAlignment="Left" Margin="192,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+        <TextBox x:Name="txtUniversitarios" HorizontalAlignment="Left" Margin="194,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+        <TextBox x:Name="txtOrganizacionales" HorizontalAlignment="Left" Margin="525,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+
+    </Grid>
+    
+</Window>

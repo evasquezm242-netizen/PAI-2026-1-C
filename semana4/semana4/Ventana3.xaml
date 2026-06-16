@@ -1,0 +1,20 @@
+﻿<Window x:Class="semana4.Ventana3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:semana4"
+        mc:Ignorable="d"
+        Title="Ventana3" Height="450" Width="800">
+    <Grid>
+        <Label Content="Frutas" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbFrutas" Margin="48,36,632,310">
+            <ListBoxItem Content="Piña"/>
+            <ListBoxItem Content="Pera"/>
+        </ListBox>
+        <Button x:Name="btnMostrar" Content="Mostrar Seleccionado" HorizontalAlignment="Left" Margin="48,129,0,0" VerticalAlignment="Top" Click="btnMostrar_Click"/>
+        <TextBox x:Name="txtNuevo" HorizontalAlignment="Left" Margin="48,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="48,206,0,0" VerticalAlignment="Top" Width="119" Click="btnAgregar_Click"/>
+
+    </Grid>
+</Window>
