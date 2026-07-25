@@ -10,5 +10,4 @@ namespace Votantes
     public partial class App : Application
     {
     }
-
 }

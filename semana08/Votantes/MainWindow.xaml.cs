@@ -44,5 +44,4 @@ namespace Votantes
             txt33.Text = "335";
         }
     }
-
 }
