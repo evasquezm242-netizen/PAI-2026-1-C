@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MenuContextual/MenuContextual.csproj" />
+  <Project Path="Temperaturas/Temperaturas.csproj" Id="a41f8abc-4f33-4c7b-8e48-db97144a0ad2" />
+  <Project Path="Votantes/Votantes.csproj" Id="adb5fc98-9fe7-48b1-bb95-d2db15fcbccf" />
+</Solution>
