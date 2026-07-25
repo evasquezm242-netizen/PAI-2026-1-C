@@ -1,0 +1,130 @@
+﻿<Window x:Class="T_BINGO._8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:T_BINGO._8"
+        mc:Ignorable="d"
+        Title="Juego de Bingo" Height="650" Width="950">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="380"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" Background="#FFE6F2FF">
+            <TextBlock Text="JUEGO DE BINGO" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="10">
+
+                <StackPanel>
+                    <TextBlock Text="CARTILLA" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <Grid Margin="20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="B" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="I" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="N" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="3" Text="G" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="4" Text="O" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <UniformGrid Rows="5" Columns="5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                        <TextBox x:Name="txt00" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt01" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt02" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt03" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt04" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt10" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt11" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt12" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt13" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt14" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt20" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt21" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt22" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt23" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt24" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt30" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt31" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt32" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt33" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt34" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt40" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt41" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt42" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt43" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox x:Name="txt44" Width="60" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                    </UniformGrid>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1" Padding="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="NÚMERO SORTEADO" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
+
+                    <Border Grid.Row="1" Margin="30,10" Background="#FFFBE8A6" BorderBrush="Black" BorderThickness="1">
+                        <TextBlock x:Name="tbNumeroActual" Text="-" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="2" Text="NÚMEROS SORTEADOS" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Margin="0,10"/>
+                    <ListBox x:Name="lbNumeros" Grid.Row="3" FontSize="15"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnGenerarCartilla" Grid.Column="0" Content="Generar Cartilla" Margin="10" FontWeight="Bold" Click="btnGenerarCartilla_Click"/>
+            <Button x:Name="btnIniciarJuego" Grid.Column="1" Content="Iniciar Juego" Margin="10" FontWeight="Bold" Click="btnIniciarJuego_Click"/>
+            <Button x:Name="btnSiguiente" Grid.Column="2" Content="Siguiente" Margin="10" FontWeight="Bold" IsEnabled="False" Click="btnSiguiente_Click"/>
+            <Button x:Name="btnReiniciar" Grid.Column="3" Content="Reiniciar" Margin="10" FontWeight="Bold" Click="btnReiniciar_Click"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Estado:" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="tbEstado" Text="Esperando..." FontWeight="Bold" FontSize="16" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <TextBlock Text="Resultado:" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="tbResultado" Text="-" FontWeight="Bold" Foreground="Blue" FontSize="18" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

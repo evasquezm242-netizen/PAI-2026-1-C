@@ -59,7 +59,7 @@ namespace Temperaturas
                 }
             }
 
-            tbCantidad.Text = cantidadMayorPromedio.ToString()
+            tbCantidad.Text = cantidadMayorPromedio.ToString();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -74,6 +74,11 @@ namespace Temperaturas
             {
                 txtTemperaturas[i].Text = (random.NextDouble() * 10).ToString("N2");
             }
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
