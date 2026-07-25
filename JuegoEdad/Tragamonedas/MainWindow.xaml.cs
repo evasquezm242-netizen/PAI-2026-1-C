@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,84 +18,76 @@ namespace Tragamonedas
     /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer timerReloj = new DispatcherTimer();
-        DispatcherTimer timerJuego = new DispatcherTimer();
+        private DispatcherTimer timerReloj;
+        private DispatcherTimer timerJuego;
+        private Random random = new Random();
 
-        Random random = new Random();
-
-        int contadorJuego = 0;
+        private int contadorTicks = 0;
+        private const int NUMERO_MAXIMO_TICKS = 60;
         public MainWindow()
         {
             InitializeComponent();
-
-            timerReloj.Interval = TimeSpan.FromSeconds(1);
-            timerReloj.Tick += timerReloj_Tick;
-            timerReloj.Start();
-
-            timerJuego.Interval = TimeSpan.FromMilliseconds(100);
-            timerJuego.Tick += timerJuego_Tick;
-
-            lbResultadoJuego.Visibility = Visibility.Hidden;
-        }
-
-        private void timerReloj_Tick(object sender, EventArgs e)
-        {
             tblReloj.Text = DateTime.Now.ToString("HH:mm:ss");
+
         }
 
         private void btnJugar_Click(object sender, RoutedEventArgs e)
         {
-            contadorJuego = 0;
-
+            contadorTicks = 0;
             lbResultadoJuego.Visibility = Visibility.Hidden;
-
-            txtNumero1.Clear();
-            txtJugada2.Clear();
-            txtJugada3.Clear();
-
-            btnJugar.IsEnabled = false;
-
             timerJuego.Start();
+            btnJugar.IsEnabled = false;
         }
-
-        private void timerJuego_Tick(object sender, EventArgs e)
+        private void TimerJuego_Tick(object? sender, EventArgs e)
         {
-            txtNumero1.Text = random.Next(0, 10).ToString();
-            txtJugada2.Text = random.Next(0, 10).ToString();
-            txtJugada3.Text = random.Next(0, 10).ToString();
+            int n1 = random.Next(10, 15);
+            int n2 = random.Next(10, 15);
+            int n3 = random.Next(10, 15);
 
-            contadorJuego++;
+            txtJugada1.Text = n1.ToString();
+            txtJugada2.Text = n2.ToString();
+            txtJugada3.Text = n3.ToString();
 
-            //60 x 100 ms = 6 segundos
-            if (contadorJuego == 60)
+            contadorTicks++;
+
+            if (contadorTicks >= NUMERO_MAXIMO_TICKS)
             {
                 timerJuego.Stop();
-
-                if (txtNumero1.Text == txtJugada2.Text &&
-                    txtJugada2.Text == txtJugada3.Text)
-                {
-                    lbResultadoJuego.Content = "¡¡GANASTE!!";
-                }
-                else
-                {
-                    lbResultadoJuego.Content = "PERDISTE";
-                }
-
-                lbResultadoJuego.Visibility = Visibility.Visible;
-
-                btnJugar.IsEnabled = true;
+                Validar_Jugada(n1, n2, n3);
             }
         }
 
-        private void reiniciar()
+        private void TimerReloj_Tick(object? sender, EventArgs e)
         {
-            txtNumero1.Clear();
-            txtJugada2.Clear();
-            txtJugada3.Clear();
+            tblReloj.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            timerReloj = new DispatcherTimer();
+            timerReloj.Interval = TimeSpan.FromSeconds(1);
+            timerReloj.Tick += TimerReloj_Tick;
+            timerReloj.Start();
 
-            lbResultadoJuego.Visibility = Visibility.Hidden;
+            timerJuego = new DispatcherTimer();
+            timerJuego.Interval = TimeSpan.FromMilliseconds(100);
+            timerJuego.Tick += TimerJuego_Tick;
 
-            contadorJuego = 0;
+        }
+        private void Validar_Jugada(int n1, int n2, int n3)
+        {
+            if (n1 == n2 && n2 == n3)
+            {
+                lbResultadoJuego.Content = "¡Ganaste!";
+                lbResultadoJuego.Background = Brushes.Green;
+            }
+            else
+            {
+                lbResultadoJuego.Content = "Perdiste";
+                Color color = (Color)ColorConverter.ConvertFromString("#FFAFD4EC");
+                lbResultadoJuego.Background = new SolidColorBrush(color);
+            }
+            lbResultadoJuego.Visibility = Visibility.Visible;
+            btnJugar.IsEnabled = true;
         }
     }
 }
