@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EnlaceDatos/EnlaceDatos.csproj" />
+  <Project Path="Northwind/Northwind.csproj" />
+  <Project Path="SQLServerEjemplos/SQLServerEjemplos.csproj" />
+</Solution>
